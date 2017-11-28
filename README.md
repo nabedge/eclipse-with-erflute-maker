@@ -12,3 +12,6 @@ open ./target/Eclipse.app
 
 ## see also
 * http://dbflute.seasar.org/ja/manual/function/helper/erflute/index.html
+
+## LICENSE
+* This code is under MIT License.
