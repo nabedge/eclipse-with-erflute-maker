@@ -2,7 +2,8 @@
 TARGET=./target
 ERFLUTE_JAR="org.dbflute.erflute_0.5.7.jar"
 ERFLUTE="http://dbflute.seasar.org/download/misc/helper/erflute/$ERFLUTE_JAR"
-ECLIPSE_DMG="http://ftp.jaist.ac.jp/pub/eclipse/technology/epp/downloads/release/oxygen/1a/eclipse-jee-oxygen-1a-macosx-cocoa-x86_64.dmg"
+#ECLIPSE_DMG="http://ftp.osuosl.org/pub/eclipse/technology/epp/downloads/release/2018-12/R/eclipse-java-2018-12-R-macosx-cocoa-x86_64.dmg"
+ECLIPSE_DMG="http://ftp.jaist.ac.jp/pub/eclipse/technology/epp/downloads/release/2018-12/R/eclipse-jee-2018-12-R-macosx-cocoa-x86_64.dmg"
 
 # clear
 rm -fr $TARGET
@@ -30,12 +31,12 @@ cat $TMPDIR/_eclipse.ini \
   | sed -e 's/-Xmx1024m/-Xmx3g/g' \
   > $ECLIPSE_INI
 
-# install Eclipse 2.0 style plugin support
-CMD_BASE="$ECLIPSE_HOME/Contents/MacOS/eclipse -nosplash -application org.eclipse.equinox.p2.director"
-CMD_BASE="$CMD_BASE -clean"
-CMD_BASE="$CMD_BASE -debug"
-CMD_BASE="$CMD_BASE -repository http://download.eclipse.org/releases/oxygen"
-CMD_BASE="$CMD_BASE -repository http://download.eclipse.org/eclipse/updates/4.7"
-
-CMD="$CMD_BASE -installIU org.eclipse.osgi.compatibility.plugins.feature.feature.group"
-$CMD
+## install Eclipse 2.0 style plugin support
+#CMD_BASE="$ECLIPSE_HOME/Contents/MacOS/eclipse -nosplash -application org.eclipse.equinox.p2.director"
+#CMD_BASE="$CMD_BASE -clean"
+#CMD_BASE="$CMD_BASE -debug"
+#CMD_BASE="$CMD_BASE -repository http://download.eclipse.org/releases/2018-12"
+#CMD_BASE="$CMD_BASE -repository http://download.eclipse.org/eclipse/updates/4.10"
+#
+#CMD="$CMD_BASE -installIU org.eclipse.osgi.compatibility.plugins.feature.feature.group"
+#$CMD
